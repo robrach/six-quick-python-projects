@@ -1,7 +1,11 @@
 import requests
 from pprint import pprint
 
-API_Key = '28195b13606ef59939734f585b66d471'
+import os
+from decouple import config
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+API_Key = config('API_Key')   # API_Key = "..." is in the .env file (for security reasons)
 
 city = input("Enter a city: ")
 
