@@ -7,9 +7,11 @@ def rename_files():
            "files_for_test/"
     for filename in os.listdir(path):
         old_file_name = path + filename
-        print('\nold:', old_file_name)
         new_file_name = path + "exfile_" + str(i)
+
+        print('\nold:', old_file_name)
         print('new:', new_file_name)
+
         os.rename(old_file_name, new_file_name)
         i += 1
 
