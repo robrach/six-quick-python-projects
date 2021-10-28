@@ -1,7 +1,8 @@
 import qrcode
+import sys
 
-data = "https://github.com/robrach"
+path_the_same_as_python_script = sys.path[0]
 
+data = "https://github.com/robrach"     # It will be coded in QR code.
 img = qrcode.make(data)
-
-img.save('/home/robert/Six_Quick_Python_Projects/6 - QR coding/myqrcode_01.png')
+img.save(path_the_same_as_python_script + '/myQRcode.png')

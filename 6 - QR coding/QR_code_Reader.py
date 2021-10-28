@@ -1,8 +1,9 @@
 from pyzbar.pyzbar import decode
 from PIL import Image
+import sys
 
-img = Image.open('/home/robert/Six_Quick_Python_Projects/6 - QR coding/myqrcode_01.png')
+path_the_same_as_python_script = sys.path[0]
 
+img = Image.open(path_the_same_as_python_script + '/myQRcode.png')
 result = decode(img)
-
 print(result)
